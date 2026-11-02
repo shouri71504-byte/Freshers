@@ -81,7 +81,7 @@ st.markdown(
 def load_excel_data():
     """Load the paid-student roster from the expected Excel sheet."""
     try:
-        df = pd.read_excel("students_list.xlsx", sheet_name="CSE-TOTAL")
+        df = pd.read_excel("Students_list.xlsx", sheet_name="CSE-TOTAL")
         df.columns = df.columns.str.strip()
         df["Roll Number"] = df["Roll Number"].astype(str).str.upper().str.strip()
         df["Payment Status"] = df["Payment Status"].astype(str).str.lower().str.strip()
